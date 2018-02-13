@@ -30,6 +30,8 @@ namespace BankingProject
         }
             public void Withdraw(double amount)
         {
+            //TODO require a check number when depositing 
+
             IsAmountNegative(amount);
 
             if (amount > Balance)
@@ -57,6 +59,10 @@ namespace BankingProject
                 return true;
             }
             return false;
+        }
+        public virtual string ToPrint()
+        {
+            return " Acct Name = "+ Owner.FullName +"Id =" + Id.ToString() + ", Desc=" + Description + ", Bal= " + Balance.ToString();
         }
     }
 }

@@ -8,6 +8,13 @@ namespace BankingProject
 {
     public class Customer
     {
-        
+        public int Id { get; set; }
+        public string FullName { get; set; }
+
+        public Customer(int id, string fullname)
+        {
+            Id = id;
+            FullName = fullname;
+        }
     }
 }
